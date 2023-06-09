@@ -24,7 +24,7 @@
 		</button>
 	</div>
 	<div class="grid grid-cols-3 gap-2 px-4 mb-4 text-white font-medium">
-		<button class="block border-0 p-4 text-sky-700 bg-lime-300 opacity-80">
+		<button class="block border-0 p-3 text-sky-700 bg-lime-300 opacity-80">
 			<div class="flex flex-col items-center">
 				Protein
 				<svg
@@ -43,7 +43,7 @@
 				</svg>
 			</div>
 		</button>
-		<button class="block border-0 p-4 text-sky-700 bg-yellow-300 opacity-80">
+		<button class="block border-0 p-3 text-sky-700 bg-yellow-300 opacity-80">
 			<div class="flex flex-col items-center">
 				Fat<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +61,7 @@
 				</svg>
 			</div>
 		</button>
-		<button class="block border-0 p-4 bg-sky-700 text-red-300 opacity-60">
+		<button class="block border-0 p-3 bg-sky-700 text-red-300 opacity-60">
 			<div class="flex flex-col items-center">
 				Carb.<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +80,7 @@
 			</div>
 		</button>
 	</div>
-	<div class="px-4 text-xs mb-8">
+	<div class="px-4 text-xs mb-6">
 		<p class="mb-6 text-left text-lime-300 font-medium text-2xl">
 			<span class="text-sm">Protein:</span>
 			{proteinG}g
@@ -94,7 +94,7 @@
 			class="block w-full h-2 bg-sky-700 appearance-none cursor-pointer dark:bg-gray-700 range-slider protein opacity-80"
 		/>
 	</div>
-	<div class="px-4 text-xs mb-8">
+	<div class="px-4 text-xs mb-6">
 		<p class="mb-6 text-left text-yellow-300 font-medium text-2xl">
 			<span class="text-sm">Fat:</span>
 			{fatG}g
@@ -109,7 +109,7 @@
 		/>
 	</div>
 	<div class="grid grid-cols-2 gap-2 p-4 text-white font-medium">
-		<button class="block border-0 p-4 text-sky-700 bg-lime-300 opacity-80">
+		<button class="block border-0 p-3 text-sky-700 bg-lime-300 opacity-80">
 			<div class="flex flex-col items-center">
 				Nutritious
 				<svg
@@ -128,7 +128,7 @@
 				</svg>
 			</div>
 		</button>
-		<button class="block border-0 p-4 bg-sky-700 text-red-300 opacity-60">
+		<button class="block border-0 p-3 bg-sky-700 text-red-300 opacity-60">
 			<div class="flex flex-col items-center">
 				Just calories
 				<svg
@@ -150,10 +150,7 @@
 	</div>
 </div>
 <div class="flex p-4">
-	<button
-		type="button"
-		class="block w-full border-0 p-4 bg-white text-sky-800 opacity-80 font-medium"
-	>
+	<button type="button" class="block w-full border-0 p-3 bg-white text-sky-800 font-medium text-xl">
 		Save
 	</button>
 </div>
@@ -162,8 +159,8 @@
 	.range-slider.protein::-webkit-slider-thumb {
 		-webkit-appearance: none;
 		appearance: none;
-		width: 2rem;
-		height: 2rem;
+		width: 1.6rem;
+		height: 1.6rem;
 		background: #bef264;
 		cursor: pointer;
 		border-radius: 50%;
@@ -171,8 +168,8 @@
 	.range-slider.fat::-webkit-slider-thumb {
 		-webkit-appearance: none;
 		appearance: none;
-		width: 2rem;
-		height: 2rem;
+		width: 1.6rem;
+		height: 1.6rem;
 		background: #fde047;
 		cursor: pointer;
 		border-radius: 50%;
