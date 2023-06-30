@@ -61,7 +61,7 @@
 	};
 </script>
 
-<div class="p-3 flex flex-col justify-between h-full">
+<div class="p-3 flex flex-col justify-between h-full max-w-md mx-auto">
 	<div>
 		<div class="flex justify-between items-center mb-3">
 			<p class="text-sm text-white opacity-80 text-left">
