@@ -1,6 +1,5 @@
 import { invalidate } from '$app/navigation'
-import { PUBLIC_SUPABASE_PROJECT_URL } from '$env/static/public'
-import { PRIVATE_SUPABASE_SECRET_KEY } from '$env/static/private'
+import { PUBLIC_SUPABASE_PROJECT_URL, PUBLIC_SUPABASE_SECRET_KEY } from '$env/static/public'
 import { createSupabaseLoadClient } from '@supabase/auth-helpers-sveltekit'
 
 export const load = async ({ fetch, data, depends }) => {
@@ -8,7 +7,7 @@ export const load = async ({ fetch, data, depends }) => {
 
   const supabase = createSupabaseLoadClient({
     supabaseUrl: PUBLIC_SUPABASE_PROJECT_URL,
-    supabaseKey: PRIVATE_SUPABASE_SECRET_KEY,
+    supabaseKey: PUBLIC_SUPABASE_SECRET_KEY,
     event: { fetch },
     serverSession: data.session,
   })
