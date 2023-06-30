@@ -2,38 +2,47 @@
 	let selectedValue: null | number = null;
 	let canVote = true;
 	let voted = false;
+	let showResults = false;
 
 	const options = [
 		{
 			value: 1,
+			votes: 0,
 			colour: 'bg-lime-50'
 		},
 		{
 			value: 2,
+			votes: 0,
 			colour: 'bg-lime-100'
 		},
 		{
 			value: 3,
+			votes: 1,
 			colour: 'bg-lime-200'
 		},
 		{
 			value: 5,
+			votes: 7,
 			colour: 'bg-lime-300'
 		},
 		{
 			value: 8,
+			votes: 3,
 			colour: 'bg-lime-400'
 		},
 		{
 			value: 13,
+			votes: 0,
 			colour: 'bg-lime-500'
 		},
 		{
 			value: 21,
+			votes: 0,
 			colour: 'bg-lime-600'
 		},
 		{
 			value: 34,
+			votes: 0,
 			colour: 'bg-lime-700'
 		}
 	];
@@ -87,20 +96,38 @@
 	</div>
 	<div class="grid grid-cols-2 gap-3">
 		{#each options as option}
-			<button
-				type="button"
-				disabled={voted}
-				on:click={() => {
-					if (canVote) handleOptionToggle(option.value);
-				}}
-				class="block w-full border-0 p-3 text-black font-medium text-xl mix-blend-screen {!selectedValue
-					? availableClasses
-					: option.value === selectedValue
-					? selectedClasses
-					: unselectedClasses}"
-			>
-				{option.value}
-			</button>
+			{#if showResults}
+				<div
+					class="relative w-full border-0 text-black font-medium text-xl mix-blend-screen grid grid-cols-11 gap-0.5"
+				>
+					{#each { length: option.votes } as _, i}
+						<div class="bg-white text-white py-3 opacity-70">.</div>
+					{/each}
+					{#each { length: 11 - option.votes } as _, i}
+						<div class="bg-white text-white py-3 opacity-10">.</div>
+					{/each}
+					<div
+						class="absolute inset-0 flex justify-center items-center text-white text-2xl text-shadow-white"
+					>
+						{option.value}
+					</div>
+				</div>
+			{:else}
+				<button
+					type="button"
+					disabled={voted}
+					on:click={() => {
+						if (canVote) handleOptionToggle(option.value);
+					}}
+					class="block w-full border-0 p-3 text-black font-medium text-xl mix-blend-screen {!selectedValue
+						? availableClasses
+						: option.value === selectedValue
+						? selectedClasses
+						: unselectedClasses}"
+				>
+					{option.value}
+				</button>
+			{/if}
 		{/each}
 		<div class="col-span-2">
 			<p class="text-sm text-white opacity-80">

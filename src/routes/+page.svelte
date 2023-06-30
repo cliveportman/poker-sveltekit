@@ -36,13 +36,13 @@
 				<input
 					type="text"
 					class="block w-full mt-2 p-3 bg-white bg-opacity-80 text-sky-900 outline-none font-medium text-lg"
-					placeholder="e.g. 44"
+					placeholder="e.g. 123456"
 					bind:value={roomNumber}
 				/>
 			</label>
 			<p
 				class="mt-1 text-right text-xs text-white text-opacity-80"
-				class:opacity-0={step == 1 && roomNumber.length >= 4}
+				class:opacity-0={step == 1 && roomNumber.length >= 6}
 			>
 				Min 6 characters
 			</p>
