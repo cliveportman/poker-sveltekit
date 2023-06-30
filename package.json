@@ -35,5 +35,8 @@
 		"vitest": "^0.25.3"
 	},
 	"type": "module",
-	"dependencies": {}
+	"dependencies": {
+		"@supabase/auth-helpers-sveltekit": "^0.10.1",
+		"@supabase/supabase-js": "^2.26.0"
+	}
 }
